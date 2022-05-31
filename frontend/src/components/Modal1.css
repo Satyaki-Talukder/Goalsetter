@@ -1,0 +1,37 @@
+.modal-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.modal-background {
+    position: absolute;
+    background-color: rgb(151, 151, 151);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: .5;
+}
+
+.modal {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+}
+
+.modal .closebutton {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: red;
+    font-weight: bold;
+}
+
+.confirm {
+    font-size: 18px;
+}

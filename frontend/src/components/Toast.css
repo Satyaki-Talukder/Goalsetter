@@ -1,0 +1,28 @@
+.toast-container {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    animation: slideToastIn 0.3s, slideToastOut 0.3s 2.7s;
+}
+
+@keyframes slideToastIn {
+    from {
+        top: -10%;
+    }
+
+    to {
+        top: 5%;
+    }
+}
+
+@keyframes slideToastOut {
+    from {
+        top: 5%;
+    }
+
+    to {
+        top: -10%;
+    }
+}
