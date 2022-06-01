@@ -7,7 +7,7 @@
 }
 
 .modal-background {
-    position: absolute;
+    position: fixed;
     background-color: rgb(151, 151, 151);
     left: 0;
     right: 0;
