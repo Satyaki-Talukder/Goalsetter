@@ -36,16 +36,16 @@ const Login = ({setAuthComp}) => {
     };
 
   return (
-    <div className='container mx-auto flex flex-col space-y-12 mt-16 items-center'>
+    <div className='container mx-auto flex flex-col space-y-12 mt-16 mb-6 items-center'>
         <h1 className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">Login here</h1>
         <form onSubmit={handleLogin} className='space-y-12 text-center'>
-            <div className="space-y-6 flex flex-col items-end">
+            <div className="space-y-5 flex flex-col items-end">
                 <Input type='text' label='Enter email' name='email' value={email} onChange={onChange} />
                 <Input type='password' label='Enter password' name='password' value={password} onChange={onChange} />
             </div>
             <button className='bg-brightRed text-white w-96 p-2 rounded' type='submit'>Login</button>
         </form>
-        <button className='text-blue w-96' onClick={() => setAuthComp(1)}>Not Registered? Register here...</button>
+        <button className='text-blue-400 w-96 mb-5' onClick={() => setAuthComp(1)}>Not Registered? Register here...</button>
     </div>
   )
 }
