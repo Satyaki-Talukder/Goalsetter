@@ -7,7 +7,7 @@ const GoalItem = ({goal, getGoals, myGoals, setMyGoals}) => {
     const {toastRef, modalRef} = useAuth();
 
 
-    let url = `http://localhost:5000/api/goals/${goal._id}`
+    let url = `https://goal-setter-st.herokuapp.com/api/goals/${goal._id}`
     let accesstoken = JSON.parse(localStorage.getItem('userData')).usertoken
     const authAxios = axios.create({
         baseURL: url,

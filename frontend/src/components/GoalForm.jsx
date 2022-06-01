@@ -11,7 +11,7 @@ const GoalForm = ({getGoals, setMyGoals}) => {
 
 
     const addGoal = async () => {
-        let url = 'http://localhost:5000/api/goals'
+        let url = 'https://goal-setter-st.herokuapp.com/api/goals'
         let accesstoken = JSON.parse(localStorage.getItem('userData')).usertoken
         const authAxios = axios.create({
             baseURL: url,

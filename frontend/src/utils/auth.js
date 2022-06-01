@@ -13,6 +13,8 @@ export const AuthProvider = ({children}) => {
     const toastRef = useRef(null);
     const modalRef = useRef(null);
 
+    // const url = goal-setter-st.herokuapp.com
+
 
     if(!user && JSON.parse(localStorage.getItem('userData')) !== null && JSON.parse(localStorage.getItem('userData')).usergot !== null) {
         setUser(JSON.parse(localStorage.getItem('userData')).usergot);
@@ -24,7 +26,7 @@ export const AuthProvider = ({children}) => {
         const { name, email, password, password2 } = reguser;
         if(password !== password2) { toastRef.current.show('warning', 'Passwords do not match!'); return; }
         if ((name || email || password) === '') { toastRef.current.show('warning', 'Fields shouldn\'t be empty'); return; }
-        await axios.post('http://localhost:5000/api/users', reguser)
+        await axios.post('https://goal-setter-st.herokuapp.com/api/users', reguser)
             .then(res => {
                 console.log('New user res:', res);
                 if(res.status === 201) {
@@ -43,7 +45,7 @@ export const AuthProvider = ({children}) => {
     const login = useCallback(async (user, redirectPath) => {
         const {email, password} = user;
         if ((email || password) === '') { toastRef.current.show('warning', 'Fields shouldn\'t be empty'); return; }
-        await axios.post('http://localhost:5000/api/users/login', user)
+        await axios.post(`https://goal-setter-st.herokuapp.com/api/users/login`, user)
             .then(res => {
                 console.log(res);
                 if(res.status === 200) {
